@@ -37,9 +37,10 @@
             // 
             // buttonVariant1
             // 
-            this.buttonVariant1.Location = new System.Drawing.Point(12, 12);
+            this.buttonVariant1.Location = new System.Drawing.Point(16, 15);
+            this.buttonVariant1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonVariant1.Name = "buttonVariant1";
-            this.buttonVariant1.Size = new System.Drawing.Size(96, 23);
+            this.buttonVariant1.Size = new System.Drawing.Size(128, 28);
             this.buttonVariant1.TabIndex = 0;
             this.buttonVariant1.Text = "Варіант 1";
             this.buttonVariant1.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // buttonVariant2
             // 
-            this.buttonVariant2.Location = new System.Drawing.Point(12, 41);
+            this.buttonVariant2.Location = new System.Drawing.Point(16, 50);
+            this.buttonVariant2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonVariant2.Name = "buttonVariant2";
-            this.buttonVariant2.Size = new System.Drawing.Size(96, 23);
+            this.buttonVariant2.Size = new System.Drawing.Size(128, 28);
             this.buttonVariant2.TabIndex = 0;
             this.buttonVariant2.Text = "Варіант 2";
             this.buttonVariant2.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // buttonVariant3
             // 
-            this.buttonVariant3.Location = new System.Drawing.Point(12, 70);
+            this.buttonVariant3.Location = new System.Drawing.Point(16, 86);
+            this.buttonVariant3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonVariant3.Name = "buttonVariant3";
-            this.buttonVariant3.Size = new System.Drawing.Size(96, 23);
+            this.buttonVariant3.Size = new System.Drawing.Size(128, 28);
             this.buttonVariant3.TabIndex = 0;
             this.buttonVariant3.Text = "Варіант 3";
             this.buttonVariant3.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // buttonVariant4
             // 
-            this.buttonVariant4.Location = new System.Drawing.Point(12, 99);
+            this.buttonVariant4.Location = new System.Drawing.Point(16, 122);
+            this.buttonVariant4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonVariant4.Name = "buttonVariant4";
-            this.buttonVariant4.Size = new System.Drawing.Size(96, 23);
+            this.buttonVariant4.Size = new System.Drawing.Size(128, 28);
             this.buttonVariant4.TabIndex = 0;
             this.buttonVariant4.Text = "Варіант 4";
             this.buttonVariant4.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             // 
             // buttonVariant5
             // 
-            this.buttonVariant5.Location = new System.Drawing.Point(12, 128);
+            this.buttonVariant5.Location = new System.Drawing.Point(16, 158);
+            this.buttonVariant5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonVariant5.Name = "buttonVariant5";
-            this.buttonVariant5.Size = new System.Drawing.Size(96, 23);
+            this.buttonVariant5.Size = new System.Drawing.Size(128, 28);
             this.buttonVariant5.TabIndex = 0;
             this.buttonVariant5.Text = "Варіант 5";
             this.buttonVariant5.UseVisualStyleBackColor = true;
@@ -87,14 +92,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(120, 161);
+            this.ClientSize = new System.Drawing.Size(197, 243);
             this.Controls.Add(this.buttonVariant5);
             this.Controls.Add(this.buttonVariant4);
             this.Controls.Add(this.buttonVariant3);
             this.Controls.Add(this.buttonVariant2);
             this.Controls.Add(this.buttonVariant1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Diacriticity — Вибір варіанту";
             this.ResumeLayout(false);
