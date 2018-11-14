@@ -20,6 +20,7 @@ namespace Diacriticity
         public MainForm()
         {
             InitializeComponent();
+            Symbols.SetDictionary();
             variant1.FormClosing += Variant1_FormClosing;
             variant2.FormClosing += Variant2_FormClosing;
             variant3.FormClosing += Variant3_FormClosing;

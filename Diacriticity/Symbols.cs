@@ -8,8 +8,8 @@ namespace Diacriticity
 {
     class Symbols
     {
-        static Dictionary<char, string> symbols = new Dictionary<char, string>();
-        static void SetSymbols()
+        static public Dictionary<char, string> symbols = new Dictionary<char, string>();
+        static public void SetDictionary()
         {
             symbols.Add('a', "aăąªäåæāàáâã");
             symbols.Add('b', "b");
