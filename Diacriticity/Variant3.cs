@@ -12,10 +12,8 @@ namespace Diacriticity
 {
     public partial class Variant3 : Form
     {
-        
         public Variant3()
         {
-            
             InitializeComponent();
         }
         private const long WS_EX_NOACTIVATE = 0x08000000;
@@ -31,7 +29,6 @@ namespace Diacriticity
 
             }
         }
-        
         private void button11_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked || checkBox3.Checked)
@@ -52,23 +49,7 @@ namespace Diacriticity
             if(checkBox1.Checked || checkBox3.Checked)
             {
                 SendKeys.Send("Q");
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 textBox1.Text += "Q";
-
                 checkBox3.Checked = false;
             }
             else
