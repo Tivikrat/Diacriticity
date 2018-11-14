@@ -8,65 +8,61 @@ namespace Diacriticity
 {
     class Symbols
     {
-        static Dictionary<char, char[]> symbols = new Dictionary<char, char[]>();
-        static void SetSymbols()
+        static public Dictionary<char, string> symbols = new Dictionary<char, string>();
+        static public void SetDictionary()
         {
-            symbols.Add('a', new char[] { 'a', 'ă', 'ą', 'ª', 'ä', 'å', 'æ', 'ā', 'à', 'á', 'â', 'ã' });
-            symbols.Add('b', new char[] { 'b' });
-            symbols.Add('c', new char[] { 'c', 'č', 'ĉ', 'ç', 'ć', 'ċ' });
-            symbols.Add('d', new char[] { 'd', 'ð', 'ď', 'đ' });
-            symbols.Add('e', new char[] { 'e', 'ė', 'ē', 'ĕ', 'ę', 'ě', 'é', 'è', 'ê', 'ë' });
-            symbols.Add('f', new char[] { 'f' });
-            symbols.Add('g', new char[] { 'g', 'ġ', 'ĝ', 'ğ', 'ģ' });
-            symbols.Add('h', new char[] { 'h', 'ĥ' });
-            symbols.Add('i', new char[] { 'i', 'į', 'ı', 'ĭ', 'ī', 'ï', 'ĩ', 'î', 'í', 'ì' });
-            symbols.Add('j', new char[] { 'j', 'ĵ' });
-            symbols.Add('k', new char[] { 'k', 'ķ', 'ĸ' });
-            symbols.Add('l', new char[] { 'l', 'ł', 'ŀ', 'ľ', 'ļ', 'ĺ' });
-            symbols.Add('m', new char[] { 'm' });
-            symbols.Add('n', new char[] { 'n', 'ŋ', 'ň', 'ŉ', 'ņ', 'ñ', 'ń' });
-            symbols.Add('o', new char[] { 'o', 'º', 'œ', 'ő', 'ŏ', 'ō', 'ø', 'ö', 'õ', 'ô', 'ó', 'ò' });
-
-            //To be continued!
-            /*
-            p
-            q
-            rŗŕř
-            sſşšŝßś
-            tŧţþť
-            uųůűūüũŭúùû
-            v
-            wŵ
-            x
-            yŷýÿ
-            zžźż
-            AĂĄÄÅÆĀÀÁÂÃ
-            B
-            CČĈÇĆĊ
-            DÐĎĐ
-            EĖĒĔĘĚÉÈÊË
-            F
-            GĠĜĞĢ
-            HĤ
-            IĮĬĪÏĨÎÍÌ
-            JĴ
-            KĶ
-            LŁĿĽĻĹ
-            M
-            NŊŇŅÑŃ
-            OŒŐŎŌØÖÕÔÓÒ
-            P
-            Q
-            RŖŔŘ
-            SŞŠŜẞŚ
-            TŦŢÞŤ
-            UŲŮŰŪÜŨŬÚÙÛ
-            V
-            WŴ
-            X
-            YŶÝŸ
-            ZŽŹŻ
-            */
+            symbols.Add('a', "aăąªäåæāàáâã");
+            symbols.Add('b', "b");
+            symbols.Add('c', "cčĉçćċ");
+            symbols.Add('d', "dðďđ");
+            symbols.Add('e', "eėēĕęěéèêë");
+            symbols.Add('f', "f");
+            symbols.Add('g', "gġĝğģ");
+            symbols.Add('h', "hĥ");
+            symbols.Add('i', "iįıĭīïĩîíì");
+            symbols.Add('j', "jĵ");
+            symbols.Add('k', "kķĸ");
+            symbols.Add('l', "lłŀľļĺ");
+            symbols.Add('m', "m");
+            symbols.Add('n', "nŋňŉņñń");
+            symbols.Add('o', "oºœőŏōøöõôóò");
+            symbols.Add('p', "p");
+            symbols.Add('q', "q");
+            symbols.Add('r', "rŗŕř");
+            symbols.Add('s', "sſşšŝßś");
+            symbols.Add('t', "tŧţþť");
+            symbols.Add('u', "uųůűūüũŭúùû");
+            symbols.Add('v', "v");
+            symbols.Add('w', "wŵ");
+            symbols.Add('x', "x");
+            symbols.Add('y', "yŷýÿ");
+            symbols.Add('z', "zžźż");
+            symbols.Add('A', "AĂĄÄÅÆĀÀÁÂÃ");
+            symbols.Add('B', "B");
+            symbols.Add('C', "CČĈÇĆĊ");
+            symbols.Add('D', "DÐĎĐ");
+            symbols.Add('E', "EĖĒĔĘĚÉÈÊË");
+            symbols.Add('F', "F");
+            symbols.Add('G', "GĠĜĞĢ");
+            symbols.Add('H', "HĤ");
+            symbols.Add('I', "IĮĬĪÏĨÎÍÌ");
+            symbols.Add('J', "JĴ");
+            symbols.Add('K', "KĶ");
+            symbols.Add('L', "LŁĿĽĻĹ");
+            symbols.Add('M', "M");
+            symbols.Add('N', "NŊŇŅÑŃ");
+            symbols.Add('O', "OŒŐŎŌØÖÕÔÓÒ");
+            symbols.Add('P', "P");
+            symbols.Add('Q', "Q");
+            symbols.Add('R', "RŖŔŘ");
+            symbols.Add('S', "SŞŠŜẞŚ");
+            symbols.Add('T', "TŦŢÞŤ");
+            symbols.Add('U', "UŲŮŰŪÜŨŬÚÙÛ");
+            symbols.Add('V', "V");
+            symbols.Add('W', "WŴ");
+            symbols.Add('X', "X");
+            symbols.Add('Y', "YŶÝŸ");
+            symbols.Add('Z', "ZŽŹŻ");
         }
     }
 }
