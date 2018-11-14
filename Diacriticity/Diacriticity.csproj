@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Symbols.cs" />
     <Compile Include="Variant1.cs">
       <SubType>Form</SubType>
     </Compile>
