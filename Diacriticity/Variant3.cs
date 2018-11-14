@@ -16,7 +16,19 @@ namespace Diacriticity
         {
             InitializeComponent();
         }
-       
+        private const long WS_EX_NOACTIVATE = 0x08000000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams baseParams = base.CreateParams;
+
+                baseParams.ExStyle |= (int)WS_EX_NOACTIVATE;
+
+                return baseParams;
+
+            }
+        }
         private void button11_Click(object sender, EventArgs e)
         {
             printKey('L', 'l');
@@ -75,7 +87,6 @@ namespace Diacriticity
         private void button19_Click(object sender, EventArgs e)
         {
             printKey('A', 'a');
-            string aa = Symbols.symbols
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -155,27 +166,10 @@ namespace Diacriticity
             textBox1.SelectedText = key.ToString();
             checkBox3.Checked = false;
         }
-        private void btn_nodisplay()
-        {
-            button28.Visible = false;
-            button29.Visible = false;
-            button30.Visible = false;
-            button31.Visible = false;
-            button32.Visible = false;
-            button33.Visible = false;
-            button34.Visible = false;
-            button35.Visible = false;
-            button36.Visible = false;
-            button37.Visible = false;
-        }
+
         private void button27_Click(object sender, EventArgs e)
         {
             textBox1.SelectedText = " ";
-        }
-
-        private void Variant3_Load(object sender, EventArgs e)
-        {
-            btn_nodisplay();
         }
     }
 }
