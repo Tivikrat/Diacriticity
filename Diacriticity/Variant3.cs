@@ -18,8 +18,7 @@ namespace Diacriticity
 
         private void printKey(char key)
         {
-            key = (checkBox1.Checked != checkBox3.Checked ? key.ToString().ToUpper()[0] : key.ToString().ToLower()[0]);
-            SendKeys.Send(key.ToString());
+            key = checkBox1.Checked != checkBox3.Checked ? key.ToString().ToUpper()[0] : key.ToString().ToLower()[0];
             textBox1.SelectedText = key.ToString();
             checkBox3.Checked = false;
         }

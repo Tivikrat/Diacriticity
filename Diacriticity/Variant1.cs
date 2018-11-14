@@ -16,5 +16,53 @@ namespace Diacriticity
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void SetDiacriticial(char key)
+        {
+            if (!Symbols.symbols.ContainsKey(key))
+            {
+                return;
+            }
+            for (int i = 0; i < Symbols.symbols[key].Length; i++)
+            {
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+                buttonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridView1.Columns.Add(buttonColumn);
+                dataGridView1[i, 0].Value = Symbols.symbols[key][i];
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Columns.Clear();
+            if (richTextBox1.SelectionStart > 0)
+            {
+                SetDiacriticial(richTextBox1.Text[richTextBox1.SelectionStart - 1]);
+            }
+        }
+
+        private void richTextBox1_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Columns.Clear();
+            if (richTextBox1.SelectionStart > 0)
+            {
+                SetDiacriticial(richTextBox1.Text[richTextBox1.SelectionStart - 1]);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView gridView = (DataGridView)sender;
+            if (0 <= e.RowIndex && e.RowIndex < gridView.RowCount && 0 <= e.ColumnIndex && e.ColumnIndex <= gridView.ColumnCount)
+            {
+                char[] chars = richTextBox1.Text.ToCharArray();
+                chars[richTextBox1.SelectionStart - 1] = gridView[e.ColumnIndex, e.RowIndex].Value.ToString()[0];
+                richTextBox1.Text = string.Join("", chars);
+            }
+        }
     }
 }
