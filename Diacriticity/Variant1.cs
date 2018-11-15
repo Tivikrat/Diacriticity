@@ -67,6 +67,7 @@ namespace Diacriticity
                 int selectionStart = richTextBox1.SelectionStart;
                 richTextBox1.Text = string.Join("", chars);
                 richTextBox1.SelectionStart = selectionStart;
+                richTextBox1.Focus();
             }
         }
     }

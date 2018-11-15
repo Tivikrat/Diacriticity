@@ -44,6 +44,7 @@ namespace Diacriticity
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             richTextBox1.SelectedText = e.Node.Text;
+            richTextBox1.Focus();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace Diacriticity
                 chars[textBox1.SelectionStart - 1] = gridView[e.ColumnIndex, e.RowIndex].Value.ToString()[0];
                 textBox1.Text = string.Join("", chars);
                 textBox1.SelectionStart = textBox1.Text.Length;
+                textBox1.Focus();
             }
         }
         private void button27_Click(object sender, EventArgs e)

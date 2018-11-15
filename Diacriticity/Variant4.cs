@@ -18,7 +18,7 @@ namespace Diacriticity
         }
         private void keyClick(object sender, EventArgs e)
         {
-            btn_Romove();
+            btn_Remove();
             Button button = (Button)sender;
             printKey(button.Text[0], button.Left, button.Top);
             
@@ -65,9 +65,10 @@ namespace Diacriticity
             chars[textBox1.SelectionStart - 1] = button.Text[0];
             textBox1.Text = string.Join("", chars);
             textBox1.SelectionStart = textBox1.Text.Length;
-            btn_Romove();
+            textBox1.Focus();
+            btn_Remove();
         }
-        private void btn_Romove()
+        private void btn_Remove()
         {
             Controls.RemoveByKey("btn0");
             Controls.RemoveByKey("btn1");
@@ -89,7 +90,7 @@ namespace Diacriticity
 
         private void button28_Click(object sender, EventArgs e)
         {
-            btn_Romove();
+            btn_Remove();
         }
     }
 }
