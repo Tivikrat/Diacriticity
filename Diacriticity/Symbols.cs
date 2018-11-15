@@ -38,32 +38,6 @@ namespace Diacriticity
             dictionary.Add('x', "x");
             dictionary.Add('y', "yŷýÿ");
             dictionary.Add('z', "zžźż");
-            dictionary.Add('A', "AĂĄÄÅÆĀÀÁÂÃ");
-            dictionary.Add('B', "B");
-            dictionary.Add('C', "CČĈÇĆĊ");
-            dictionary.Add('D', "DÐĎĐ");
-            dictionary.Add('E', "EĖĒĔĘĚÉÈÊË");
-            dictionary.Add('F', "F");
-            dictionary.Add('G', "GĠĜĞĢ");
-            dictionary.Add('H', "HĤ");
-            dictionary.Add('I', "IĮĬĪÏĨÎÍÌ");
-            dictionary.Add('J', "JĴ");
-            dictionary.Add('K', "KĶ");
-            dictionary.Add('L', "LŁĿĽĻĹ");
-            dictionary.Add('M', "M");
-            dictionary.Add('N', "NŊŇŅÑŃ");
-            dictionary.Add('O', "OŒŐŎŌØÖÕÔÓÒ");
-            dictionary.Add('P', "P");
-            dictionary.Add('Q', "Q");
-            dictionary.Add('R', "RŖŔŘ");
-            dictionary.Add('S', "SŞŠŜẞŚ");
-            dictionary.Add('T', "TŦŢÞŤ");
-            dictionary.Add('U', "UŲŮŰŪÜŨŬÚÙÛ");
-            dictionary.Add('V', "V");
-            dictionary.Add('W', "WŴ");
-            dictionary.Add('X', "X");
-            dictionary.Add('Y', "YŶÝŸ");
-            dictionary.Add('Z', "ZŽŹŻ");
             foreach (var key in dictionary.Keys)
             {
                 foreach (var symbol in dictionary[key])
@@ -75,6 +49,14 @@ namespace Diacriticity
                     else
                     {
                         symbols.Add(symbol, dictionary[key]);
+                    }
+                    if (symbols.ContainsKey(symbol.ToString().ToUpper()[0]))
+                    {
+                        symbols[symbol.ToString().ToUpper()[0]] += key.ToString().ToUpper()[0];
+                    }
+                    else
+                    {
+                        symbols.Add(symbol.ToString().ToUpper()[0], dictionary[key].ToUpper());
                     }
                 }
             }

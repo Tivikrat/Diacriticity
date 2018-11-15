@@ -15,6 +15,35 @@ namespace Diacriticity
         public Variant5()
         {
             InitializeComponent();
+            foreach (var key in Symbols.dictionary.Keys)
+            {
+                TreeNode treeNode = new TreeNode(key.ToString());
+                TreeNode[] treeNodes = new TreeNode[Symbols.dictionary[key].Length];
+                for (int i = 0; i < Symbols.dictionary[key].Length; i++)
+                {
+                    TreeNode node = new TreeNode(Symbols.dictionary[key][i].ToString());
+                    treeNodes[i] = node;
+                }
+                treeNode.Nodes.AddRange(treeNodes);
+                treeView1.Nodes.Add(treeNode);
+            }
+            foreach (var key in Symbols.dictionary.Keys)
+            {
+                TreeNode treeNode = new TreeNode(key.ToString().ToUpper());
+                TreeNode[] treeNodes = new TreeNode[Symbols.dictionary[key].Length];
+                for (int i = 0; i < Symbols.dictionary[key].Length; i++)
+                {
+                    TreeNode node = new TreeNode(Symbols.dictionary[key][i].ToString().ToUpper());
+                    treeNodes[i] = node;
+                }
+                treeNode.Nodes.AddRange(treeNodes);
+                treeView2.Nodes.Add(treeNode);
+            }
+        }
+
+        private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            richTextBox1.SelectedText = e.Node.Text;
         }
     }
 }

@@ -12,15 +12,20 @@ namespace Diacriticity
 {
     public partial class MainForm : Form
     {
-        Variant1 variant1 = new Variant1();
-        Variant2 variant2 = new Variant2();
-        Variant3 variant3 = new Variant3();
-        Variant4 variant4 = new Variant4();
-        Variant5 variant5 = new Variant5();
+        Variant1 variant1;
+        Variant2 variant2;
+        Variant3 variant3;
+        Variant4 variant4;
+        Variant5 variant5;
         public MainForm()
         {
             InitializeComponent();
             Symbols.SetDictionary();
+            variant1 = new Variant1();
+            variant2 = new Variant2();
+            variant3 = new Variant3();
+            variant4 = new Variant4();
+            variant5 = new Variant5();
             variant1.FormClosing += Variant1_FormClosing;
             variant2.FormClosing += Variant2_FormClosing;
             variant3.FormClosing += Variant3_FormClosing;
