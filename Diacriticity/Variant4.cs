@@ -91,5 +91,10 @@ namespace Diacriticity
         {
             btn_Romove();
         }
+
+        private void Variant4_MouseClick(object sender, MouseEventArgs e)
+        {
+            btn_Romove();
+        }
     }
 }

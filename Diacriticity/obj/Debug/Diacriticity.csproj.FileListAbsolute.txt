@@ -44,3 +44,4 @@ D:\Projects\GitHub\Diacriticity\Diacriticity\obj\Debug\Diacriticity.csproj.CoreC
 D:\Projects\GitHub\Diacriticity\Diacriticity\obj\Debug\Diacriticity.exe
 D:\Projects\GitHub\Diacriticity\Diacriticity\obj\Debug\Diacriticity.pdb
 D:\Projects\GitHub\Diacriticity\Diacriticity\obj\Debug\Diacriticity.Variant6.resources
+C:\Users\nikbo\OneDrive\Documents\GitHub\Diacriticity\Diacriticity\obj\Debug\Diacriticity.Variant6.resources
