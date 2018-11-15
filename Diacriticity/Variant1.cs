@@ -17,6 +17,10 @@ namespace Diacriticity
             InitializeComponent();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
         private void SetDiacriticial(char key)
         {
             if (!Symbols.symbols.ContainsKey(key))
@@ -46,14 +50,7 @@ namespace Diacriticity
             dataGridView1.Columns.Clear();
             if (richTextBox1.SelectionStart > 0)
             {
-                if (richTextBox1.SelectionLength == 1)
-                {
-                    SetDiacriticial(richTextBox1.SelectedText[0]);
-                }
-                else
-                {
-                    SetDiacriticial(richTextBox1.Text[richTextBox1.SelectionStart - 1]);
-                }
+                SetDiacriticial(richTextBox1.Text[richTextBox1.SelectionStart - 1]);
             }
         }
 
@@ -64,9 +61,7 @@ namespace Diacriticity
             {
                 char[] chars = richTextBox1.Text.ToCharArray();
                 chars[richTextBox1.SelectionStart - 1] = gridView[e.ColumnIndex, e.RowIndex].Value.ToString()[0];
-                int selectionStart = richTextBox1.SelectionStart;
                 richTextBox1.Text = string.Join("", chars);
-                richTextBox1.SelectionStart = selectionStart;
             }
         }
     }

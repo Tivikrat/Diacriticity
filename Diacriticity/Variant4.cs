@@ -16,11 +16,5 @@ namespace Diacriticity
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Button button = new Button();
-            button.Visible = true;
-        }
     }
 }
