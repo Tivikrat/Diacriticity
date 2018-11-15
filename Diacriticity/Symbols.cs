@@ -8,61 +8,76 @@ namespace Diacriticity
 {
     class Symbols
     {
+        static public Dictionary<char, string> dictionary = new Dictionary<char, string>();
         static public Dictionary<char, string> symbols = new Dictionary<char, string>();
         static public void SetDictionary()
         {
-            symbols.Add('a', "aăąªäåæāàáâã");
-            symbols.Add('b', "b");
-            symbols.Add('c', "cčĉçćċ");
-            symbols.Add('d', "dðďđ");
-            symbols.Add('e', "eėēĕęěéèêë");
-            symbols.Add('f', "f");
-            symbols.Add('g', "gġĝğģ");
-            symbols.Add('h', "hĥ");
-            symbols.Add('i', "iįıĭīïĩîíì");
-            symbols.Add('j', "jĵ");
-            symbols.Add('k', "kķĸ");
-            symbols.Add('l', "lłŀľļĺ");
-            symbols.Add('m', "m");
-            symbols.Add('n', "nŋňŉņñń");
-            symbols.Add('o', "oºœőŏōøöõôóò");
-            symbols.Add('p', "p");
-            symbols.Add('q', "q");
-            symbols.Add('r', "rŗŕř");
-            symbols.Add('s', "sſşšŝßś");
-            symbols.Add('t', "tŧţþť");
-            symbols.Add('u', "uųůűūüũŭúùû");
-            symbols.Add('v', "v");
-            symbols.Add('w', "wŵ");
-            symbols.Add('x', "x");
-            symbols.Add('y', "yŷýÿ");
-            symbols.Add('z', "zžźż");
-            symbols.Add('A', "AĂĄÄÅÆĀÀÁÂÃ");
-            symbols.Add('B', "B");
-            symbols.Add('C', "CČĈÇĆĊ");
-            symbols.Add('D', "DÐĎĐ");
-            symbols.Add('E', "EĖĒĔĘĚÉÈÊË");
-            symbols.Add('F', "F");
-            symbols.Add('G', "GĠĜĞĢ");
-            symbols.Add('H', "HĤ");
-            symbols.Add('I', "IĮĬĪÏĨÎÍÌ");
-            symbols.Add('J', "JĴ");
-            symbols.Add('K', "KĶ");
-            symbols.Add('L', "LŁĿĽĻĹ");
-            symbols.Add('M', "M");
-            symbols.Add('N', "NŊŇŅÑŃ");
-            symbols.Add('O', "OŒŐŎŌØÖÕÔÓÒ");
-            symbols.Add('P', "P");
-            symbols.Add('Q', "Q");
-            symbols.Add('R', "RŖŔŘ");
-            symbols.Add('S', "SŞŠŜẞŚ");
-            symbols.Add('T', "TŦŢÞŤ");
-            symbols.Add('U', "UŲŮŰŪÜŨŬÚÙÛ");
-            symbols.Add('V', "V");
-            symbols.Add('W', "WŴ");
-            symbols.Add('X', "X");
-            symbols.Add('Y', "YŶÝŸ");
-            symbols.Add('Z', "ZŽŹŻ");
+            dictionary.Add('a', "aăąªäåæāàáâã");
+            dictionary.Add('b', "b");
+            dictionary.Add('c', "cčĉçćċ");
+            dictionary.Add('d', "dðďđ");
+            dictionary.Add('e', "eėēĕęěéèêë");
+            dictionary.Add('f', "f");
+            dictionary.Add('g', "gġĝğģ");
+            dictionary.Add('h', "hĥ");
+            dictionary.Add('i', "iįıĭīïĩîíì");
+            dictionary.Add('j', "jĵ");
+            dictionary.Add('k', "kķĸ");
+            dictionary.Add('l', "lłŀľļĺ");
+            dictionary.Add('m', "m");
+            dictionary.Add('n', "nŋňŉņñń");
+            dictionary.Add('o', "oºœőŏōøöõôóò");
+            dictionary.Add('p', "p");
+            dictionary.Add('q', "q");
+            dictionary.Add('r', "rŗŕř");
+            dictionary.Add('s', "sſşšŝßś");
+            dictionary.Add('t', "tŧţþť");
+            dictionary.Add('u', "uųůűūüũŭúùû");
+            dictionary.Add('v', "v");
+            dictionary.Add('w', "wŵ");
+            dictionary.Add('x', "x");
+            dictionary.Add('y', "yŷýÿ");
+            dictionary.Add('z', "zžźż");
+            dictionary.Add('A', "AĂĄÄÅÆĀÀÁÂÃ");
+            dictionary.Add('B', "B");
+            dictionary.Add('C', "CČĈÇĆĊ");
+            dictionary.Add('D', "DÐĎĐ");
+            dictionary.Add('E', "EĖĒĔĘĚÉÈÊË");
+            dictionary.Add('F', "F");
+            dictionary.Add('G', "GĠĜĞĢ");
+            dictionary.Add('H', "HĤ");
+            dictionary.Add('I', "IĮĬĪÏĨÎÍÌ");
+            dictionary.Add('J', "JĴ");
+            dictionary.Add('K', "KĶ");
+            dictionary.Add('L', "LŁĿĽĻĹ");
+            dictionary.Add('M', "M");
+            dictionary.Add('N', "NŊŇŅÑŃ");
+            dictionary.Add('O', "OŒŐŎŌØÖÕÔÓÒ");
+            dictionary.Add('P', "P");
+            dictionary.Add('Q', "Q");
+            dictionary.Add('R', "RŖŔŘ");
+            dictionary.Add('S', "SŞŠŜẞŚ");
+            dictionary.Add('T', "TŦŢÞŤ");
+            dictionary.Add('U', "UŲŮŰŪÜŨŬÚÙÛ");
+            dictionary.Add('V', "V");
+            dictionary.Add('W', "WŴ");
+            dictionary.Add('X', "X");
+            dictionary.Add('Y', "YŶÝŸ");
+            dictionary.Add('Z', "ZŽŹŻ");
+            foreach (var key in dictionary.Keys)
+            {
+                foreach (var symbol in dictionary[key])
+                {
+                    if (symbols.ContainsKey(symbol))
+                    {
+                        symbols[symbol] += key;
+                    }
+                    else
+                    {
+                        symbols.Add(symbol, dictionary[key]);
+                    }
+                }
+            }
         }
     }
 }
